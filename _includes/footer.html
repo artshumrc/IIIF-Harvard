@@ -1,40 +1,15 @@
-
-<div class="py-5 border-top">
-  <div class="container">
-
-    <p class="h5 mb-3">{{ site.title | escape }}</p>
-
-    <div class="row">
-
-      <div class="col-sm">
-        <ul class="list-unstyled">
-          <li>
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title | escape }}
-            {%- endif -%}
-          </li>
-          {%- if site.email -%}
-            <li>
-              <a href="mailto:{{ site.email }}">
-                {{ site.email }}
-              </a>
-            </li>
-          {%- endif -%}
-        </ul>
-      </div>
-
-
-      <div class="col-sm text-right">
-        <p>{{- site.description | escape -}}</p>
-
-        <p>
-          <a href="https://nicolas-van.github.io/bootstrap-4-github-pages/">Powered by Bootstrap 4 Github Pages</a>
-        </p>
-      </div>
-
+<div id="footer" class="footer" style="padding: 1em;">
+  <div class="row">
+    <div class="col-md-2">
+      <img src="{{ site.url }}/assets/images/harvard-logo.png" style="width: 6em; margin-right: 2em;">
     </div>
-
+    <div class="col-md-5 footer_font_IIIF">
+      © International Image Interoperability Framework at Harvard University
+    </div>
+    <div class="col-md-5 footer_font_IIIF">
+      <a href="http://www.darthcrimson.org" target="_blank" class="pull-right">
+                        Maintained by Harvard University Arts &amp; Humanities Research Computing
+                    </a>
+    </div>
   </div>
 </div>

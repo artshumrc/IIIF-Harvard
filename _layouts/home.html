@@ -1,41 +1,206 @@
 ---
-layout: default
+layout: home
 ---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-<div>
+  {%- include head.html -%}
 
-  {%- if page.title -%}
-  <header>
-    <h1>{{ page.title }}</h1>
-  </header>
-  {%- endif -%}
+  <body class="color-white">
 
-  <section>
-    {{ content }}
-  </section>
+    {%- include header.html -%}
 
-  {%- if site.posts.size > 0 -%}
-    <p class="h4">{{ page.list_title | default: "Posts" }}</p>
-    <ul class="list-unstyled">
-      {%- for post in site.posts -%}
-      <li>
-        <span class="text-muted">
-          {%- assign date_format = "%b %-d, %Y" -%}
-          {{ post.date | date: date_format }}
-        </span>
-        <p class="h5">
-          <a href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </p>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
+    {% if page.url == "/" %}
+      {% include slider.html %}
+    {% endif %}
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
+    <section id="atHarvard" class="colorBkgd" data-color="atHarvard"><!-- @Harvard-->
+                <div class="row">
+                    <div class="col-md-11 offset-md-1">
+                        <h2 class="pull-left">
+                          @Harvard
+                      </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 offset-md-1">
+                        <img src="http://iiif.harvard.edu/wp-content/uploads/2016/02/International_Image_Interoperability_Framework_logo.png">
+                    </div>
+                    <div class="col-md-7">
+                        <p class="text-left font_IIIF">
+                            The International Image Interoperability Framework (IIIF) at Harvard University website is a
+                            centralized resource for documentation, development, and use case scenarios regarding the display and
+                            sharing of cultural heritage materials stored within the various Harvard University collections.
+                            Partners include the
+                              <a href="http://library.harvard.edu" target="_blank">Harvard Library</a>,&nbsp;the
+                              <a href="http://www.harvardartmuseums.org" target="_blank">Harvard Art Museums</a>,
+                              <a href="http://harvardx.harvard.edu" target="_blank">HarvardX</a>,
+                              <a href="http://huit.harvard.edu/" target="_blank">Harvard University Information Technology</a>
+                              (<a href="http://www.darthcrimson.org" target="_blank">Arts &amp; Humanities Research Computing</a>,
+                              the
+                              <a href="http://atg.fas.harvard.edu/" target="_blank">FAS Academic Technology Group</a>,
+                              <a href="http://huit.harvard.edu/services/library-technology-services" target="_blank">Library
+                                  Technology Services</a>), and various academic departments.
+                        </p>
+                    </div>
+                </div>
+            </section><!--/ @Harvard-->
 
-</div>
+            <section id="iiif" class="colorBkgd" data-color="iiif"><!-- IIIF-->
+                <div class="row">
+                    <div class="col-md-11 offset-md-1">
+                        <h2 class="pull-left">
+                          IIIF
+                      </h2>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-8 offset-md-1">
+                      <p class="text-left font_IIIF">
+                          The
+                          <strong>International Image Interoperability Framework (IIIF)</strong>
+                          defines universal standards for describing and delivering images over the web,
+                          and is the result of collaborative efforts across universities, museums, libraries,
+                          and other cultural heritage institutions around the world.
+                          The framework specifies two APIs, one for <em>image retrieval</em> and one for <em>image display</em>,
+                          discussed in detail below.
+                          Institutions that provide IIIF endpoints for their materials are able to
+                          share these materials with anyone worldwide using a IIIF-compatible viewer.
+                          This provides an unprecedented level of exposure for archives and repositories.
+                      </p>
+                  </div>
+                  <div class="col-md-2">
+                    <img src="http://iiif.harvard.edu/wp-content/uploads/2016/01/chronique.png" style="width: 10em;">
+                  </div>
+                </div>
+              </section><!--/ IIIF-->
+
+            <section id="mirador" class="colorBkgd" data-color="mirador"><!-- Mirador-->
+                <div class="row">
+                    <div class="col-md-11 offset-md-1">
+                        <h2 class="pull-left">
+                          Mirador
+                      </h2>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-3 offset-md-1">
+                    <img src="http://showcase.iiif.io/img/showcase/mirador.jpg" style="width: 10em;" class="pull-left">
+                  </div>
+                  <div class="col-md-8">
+                      <p class="text-left font_IIIF">
+                          <strong>Mirador</strong> is a configurable, extensible, and easy-to-integrate image viewer, which
+                          enables image annotation and comparison of images from repositories dispersed around the world.
+                          Mirador has been optimized to display resources from repositories that support the
+                          <a href="http://iiif.io/">International Image Interoperability Framework</a> (IIIF) APIs. It
+                          provides a tiling windowed environment for comparing multiple image-based resources, synchronized
+                          structural and visual navigation of content using
+                          <a href="https://openseadragon.github.io/">OpenSeadragon</a>,
+                          <a href="http://www.openannotation.org/">Open Annotation</a> compliant annotation creation and viewing
+                          on deep-zoomable canvases, metadata display, book reading, bookmarking and more.
+                          <a href="http://iiif.github.io/mirador/">Additional information available at the official Mirador site</a>.
+                      </p>
+                  </div>
+                </div>
+            </section><!--/ Mirador-->
+
+            <section id="collaborators" class="colorBkgd" data-color="collaborators"><!-- Collaborators-->
+                <div class="row">
+                    <div class="col-md-8 offset-md-1">
+                        <h2 class="pull-left" >
+                            Collaborators
+                        </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 offset-md-1">
+                        <p class="text-left font_IIIF">
+                          <strong>Collaborators</strong>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                          officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                    <div class="col-md-3" style="height: 22em;">
+
+<!-- UI comment # 9 - clipping the image within a diamond shape -->
+                      <style>
+                          .imagecontainer{
+                             margin:50px auto;
+                             display:block;
+                             width:160px;
+                             height:160px;
+                             overflow:hidden;
+                             border-radius: 10px;
+                             transform: rotate(45deg);
+                             -ms-transform: rotate(45deg); /* IE 9 */
+                             -webkit-transform: rotate(45deg); /* Safari and Chrome */
+                             position:relative;
+                             margin-right: 2em;
+                             /* non-essential styling */
+                             -webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .05);
+                             box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .05);
+                            }
+                            .imagecontainer img{
+                             transform: rotate(-45deg);
+                             -ms-transform: rotate(-45deg); /* IE 9 */
+                             -webkit-transform: rotate(-45deg); /* Safari and Chrome */
+                             position:absolute;
+                             top:-100px;
+                             left:-100px;
+                            }
+                            figcaption{
+                             transform: rotate(45deg);
+                             -ms-transform: rotate(45deg); /* IE 9 */
+                             -webkit-transform: rotate(45deg);
+                             /* non-essential styling */
+                             margin:-80px 0 0 -160px;
+                             font-family:'Oswald', Arial, Sans;
+                             font-size:20px;
+                             text-transform:uppercase;
+                             letter-spacing:.05em;
+                            }
+                      </style><!--/ Clipping the image within a diamond shape -->
+
+                        <div class="imagecontainer">
+                            <img alt="" src="http://104.236.212.13/wp-content/uploads/2016/03/48309546.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </section><!--/ Collaborators-->
+
+            <section id="resources" class="colorBkgd" data-color="resources"><!-- Resources-->
+                <div class="row">
+                    <div class="col-md-8 offset-md-1">
+                        <h2 class="pull-left">
+                            Resources
+                        </h2>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 offset-md-1">
+                    <img src="http://iiif.harvard.edu/wp-content/uploads/2016/01/MediaManagerCanvas.png" style="width: 14em;">
+                  </div>
+                  <div class="col-md-6">
+                      <p class="text-left font_IIIF">
+                          (Resources page, sort of a “getting started” page. Central location for advice and guidance.
+                          Past and present workshops and events, blog posts,
+                          walkthrough documentation and working group milestones)
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                          officia deserunt mollit anim id est laborum.
+                      </p>
+                  </div>
+                </div>
+            </section><!--/ Resources-->
+
+    {%- include footer.html -%}
+    <script type="text/javascript" src="/assets/javascript/scrolling.js"></script>
+
+  </body>
+
+</html>
