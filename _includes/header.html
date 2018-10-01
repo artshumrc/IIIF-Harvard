@@ -1,5 +1,5 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" id="header-navbar" style="opacity: .75; box-shadow: inset 0 0px 0 ;">
-  <a href="http://iiif.harvard.edu" class="navbar-brand" style="margin-top: -.25em; white-space: nowrap;">
+  <a href="/" class="navbar-brand" style="margin-top: -.25em; white-space: nowrap;">
               <span>
                   <img id="logoImage" src="{{ site.url }}/assets/images/International_Image_Interoperability_Framework_logo.png" alt="" title="" style="width: 1.75em;">
               </span>
@@ -11,31 +11,18 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto navbar-font_IIIF">
-      <li class="nav-item active">
-        <a class="nav-link" href="#welcome">Welcome <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#atHarvard">@Harvard</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#iiif">IIIF</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#mirador">Mirador</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#collaborators">Collaborators</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#resources">Resources</a>
-      </li>
+      {% for link in include.navigation %}
+        {% assign current = nil %}
+        {% if page.url contains link.url and link.url != '/'%}
+          {% assign current = 'active' %}
+          {% assign screen = '<span class="sr-only">(current)</span>' %}
+        {% endif %}
+        <li class="nav-item {% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
+          <a class="nav-link {{ current }}" href="{{ link.url }}">{{ link.text }} {{ screen }}</a>
+        </li>
+      {% endfor %}
     </ul>
-    <form class="form-inline my-2 my-lg-0" style="display:none">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
   </div>
 </nav>

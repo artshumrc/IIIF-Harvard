@@ -8,7 +8,7 @@ layout: home
 
   <body class="color-white">
 
-    {%- include header.html -%}
+    {%- include header-front.html -%}
 
     {% if page.url == "/" %}
       {% include slider.html %}
@@ -28,19 +28,12 @@ layout: home
                     </div>
                     <div class="col-md-7">
                         <p class="text-left font_IIIF">
-                            The International Image Interoperability Framework (IIIF) at Harvard University website is a
+                            Harvard University has adopted the <strong>International Image Interoperability Framework (IIIF)</strong> standards as developed by the <a href="http://iiif.io/">IIIF Consortium </a>for describing and sharing digital assets, and has co-developed the IIIF image viewing software <a href="http://iiif.github.io/mirador/">Mirador</a>. Visitors can explore this site to learn more about Harvard’s work with IIIF, the Mirador viewer, and exciting innovations happening around campus that are made possible by these new standards and technologies. The IIIF at Harvard University website is a
                             centralized resource for documentation, development, and use case scenarios regarding the display and
                             sharing of cultural heritage materials stored within the various Harvard University collections.
-                            Partners include the
-                              <a href="http://library.harvard.edu" target="_blank">Harvard Library</a>,&nbsp;the
-                              <a href="http://www.harvardartmuseums.org" target="_blank">Harvard Art Museums</a>,
-                              <a href="http://harvardx.harvard.edu" target="_blank">HarvardX</a>,
-                              <a href="http://huit.harvard.edu/" target="_blank">Harvard University Information Technology</a>
-                              (<a href="http://www.darthcrimson.org" target="_blank">Arts &amp; Humanities Research Computing</a>,
-                              the
-                              <a href="http://atg.fas.harvard.edu/" target="_blank">FAS Academic Technology Group</a>,
-                              <a href="http://huit.harvard.edu/services/library-technology-services" target="_blank">Library
-                                  Technology Services</a>), and various academic departments.
+                        </p>
+                        <p class="text-left font_IIIF">
+                          <strong><a href="/atHarvard">Read more about Harvard's use of IIIF ...</a></strong>
                         </p>
                     </div>
                 </div>
@@ -57,16 +50,16 @@ layout: home
                 <div class="row">
                   <div class="col-md-8 offset-md-1">
                       <p class="text-left font_IIIF">
-                          The
-                          <strong>International Image Interoperability Framework (IIIF)</strong>
+                          The <strong>International Image Interoperability Framework (IIIF)</strong>
                           defines universal standards for describing and delivering images over the web,
                           and is the result of collaborative efforts across universities, museums, libraries,
                           and other cultural heritage institutions around the world.
-                          The framework specifies two APIs, one for <em>image retrieval</em> and one for <em>image display</em>,
-                          discussed in detail below.
                           Institutions that provide IIIF endpoints for their materials are able to
                           share these materials with anyone worldwide using a IIIF-compatible viewer.
                           This provides an unprecedented level of exposure for archives and repositories.
+                      </p>
+                      <p class="text-left font_IIIF">
+                        <strong><a href="/iiif">Learn more about IIIF ...</a></strong>
                       </p>
                   </div>
                   <div class="col-md-2">
@@ -100,6 +93,9 @@ layout: home
                           on deep-zoomable canvases, metadata display, book reading, bookmarking and more.
                           <a href="http://iiif.github.io/mirador/">Additional information available at the official Mirador site</a>.
                       </p>
+                      <p class="text-left font_IIIF">
+                        <strong><a href="/mirador">Read more about Mirador ...</a></strong>
+                      </p>
                   </div>
                 </div>
             </section><!--/ Mirador-->
@@ -115,54 +111,23 @@ layout: home
                 <div class="row">
                     <div class="col-md-8 offset-md-1">
                         <p class="text-left font_IIIF">
-                          <strong>Collaborators</strong>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                          officia deserunt mollit anim id est laborum.
+                          While many universities, libraries, museums, and cultural heritage organizations are embracing IIIF, few institutions have adopted the standard as comprehensively as Harvard's cross-campus approach to image resource sharing.
+                          Current collaborators in this ongoing effort include the
+                            <a href="http://library.harvard.edu" target="_blank">Harvard Library</a>,&nbsp;the
+                            <a href="http://www.harvardartmuseums.org" target="_blank">Harvard Art Museums</a>,
+                            <a href="http://harvardx.harvard.edu" target="_blank">HarvardX</a>,
+                            <a href="http://huit.harvard.edu/" target="_blank">Harvard University Information Technology</a>
+                            (<a href="http://www.darthcrimson.org" target="_blank">Arts &amp; Humanities Research Computing</a>,
+                            the
+                            <a href="http://atg.fas.harvard.edu/" target="_blank">FAS Academic Technology Group</a>,
+                            <a href="http://huit.harvard.edu/services/library-technology-services" target="_blank">Library
+                                Technology Services</a>), and various academic departments.
+                        </p>
+                        <p class="text-left font_IIIF">
+                           <strong><a href="/collaborators">See all Harvard IIIF collaborators ...</a></strong>
                         </p>
                     </div>
                     <div class="col-md-3" style="height: 22em;">
-
-<!-- UI comment # 9 - clipping the image within a diamond shape -->
-                      <style>
-                          .imagecontainer{
-                             margin:50px auto;
-                             display:block;
-                             width:160px;
-                             height:160px;
-                             overflow:hidden;
-                             border-radius: 10px;
-                             transform: rotate(45deg);
-                             -ms-transform: rotate(45deg); /* IE 9 */
-                             -webkit-transform: rotate(45deg); /* Safari and Chrome */
-                             position:relative;
-                             margin-right: 2em;
-                             /* non-essential styling */
-                             -webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .05);
-                             box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .05);
-                            }
-                            .imagecontainer img{
-                             transform: rotate(-45deg);
-                             -ms-transform: rotate(-45deg); /* IE 9 */
-                             -webkit-transform: rotate(-45deg); /* Safari and Chrome */
-                             position:absolute;
-                             top:-100px;
-                             left:-100px;
-                            }
-                            figcaption{
-                             transform: rotate(45deg);
-                             -ms-transform: rotate(45deg); /* IE 9 */
-                             -webkit-transform: rotate(45deg);
-                             /* non-essential styling */
-                             margin:-80px 0 0 -160px;
-                             font-family:'Oswald', Arial, Sans;
-                             font-size:20px;
-                             text-transform:uppercase;
-                             letter-spacing:.05em;
-                            }
-                      </style><!--/ Clipping the image within a diamond shape -->
 
                         <div class="imagecontainer">
                             <img alt="" src="http://104.236.212.13/wp-content/uploads/2016/03/48309546.jpg" />

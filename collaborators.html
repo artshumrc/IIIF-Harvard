@@ -1,167 +1,139 @@
 ---
-
+title: Collaborators
 ---
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
 
-  {%- include head.html -%}
+{%- include head.html -%}
 
-  <style>
+<style>
 
-  </style>
+</style>
 
-  <body>
-    {%- include header.html -%}
+<body>
+  {% assign nav=site.navigation %}
+  {%- include header.html navigation=nav -%}
 
-    <div style="margin-top: 4em;">
-            <h2>Collaborators</h2>
-
-            <div class="row display-flex">
-                <div class="col-md-3 col-sm-6 col-xs-12 col-margin-top">
-
-<!-- UI comment #2a - clipping image as a div background -->
-<!-- UI comment #2b - adding icons -->
-                    <div class="thumbnail">
-                        <div id="card-img" style="background-image: url(http://iiif.harvard.edu/wp-content/uploads/2017/03/banner.jpg);"></div>
-                        <div class="card-icon_museum">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-university fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </div>
-                        <div class="caption">
-                            <h2 class="h2-card_font_IIIF">
-                                <a href="http://iiif.harvard.edu/portfolio/beyond-words-illuminated-manuscripts-in-boston-collections/">
-                                    Beyond Words: Illuminated Manuscripts in Boston Collections
-                                </a>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 col-xs-12 col-margin-top">
-                    <div class="thumbnail">
-                        <div id="card-img" style="background-image: url(http://iiif.harvard.edu/wp-content/uploads/2016/01/utagawa.jpg);"></div>
-                        <div class="card-icon_course">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </div>
-                        <div class="caption">
-                            <h2 class="h2-card_font_IIIF">
-                                <a href="http://iiif.harvard.edu/portfolio/harvardx.html">
-                                    HarvardX
-                                </a>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 col-xs-12 col-margin-top">
-                    <div class="thumbnail">
-                        <div id="card-img" style="background-image: url(http://104.236.212.13/wp-content/uploads/2016/01/atgi.png);"></div>
-                        <div class="card-icon_application">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </div>
-                        <div class="caption">
-                            <h2 class="h2-card_font_IIIF">
-                                <a href="http://iiif.harvard.edu/portfolio/atg/">
-                                    FAS Academic Technology Group
-                                </a>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 col-xs-12 col-margin-top">
-                    <div class="thumbnail">
-                        <div id="card-img" style="background-image: url(http://104.236.212.13/wp-content/uploads/2016/01/download.png);"></div>
-                        <div class="card-icon_books">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-book fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </div>
-                        <div class="caption">
-                            <h2 class="h2-card_font_IIIF">
-                                <a href="http://iiif.harvard.edu/portfolio/jeffrey-hamburger/">
-                                    Jeffrey Hamburger, Kuno Francke Professor of German Art & Culture
-                                </a>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 col-xs-12 col-margin-top">
-                    <div class="thumbnail">
-                        <div id="card-img" style="background-image: url(http://104.236.212.13/wp-content/uploads/2016/01/vangogh-1.jpg);"></div>
-                        <div class="card-icon_museum">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-university fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </div>
-                        <div class="caption">
-                            <h2 class="h2-card_font_IIIF">
-                                <a href="http://iiif.harvard.edu/portfolio/harvard-art-museums/">
-                                    Harvard Art Museums
-                                </a>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 col-xs-12 col-margin-top">
-                    <div class="thumbnail">
-                        <div id="card-img" style="background-image: url(http://104.236.212.13/wp-content/uploads/2016/01/tarot.jpg);"></div>
-                        <div class="card-icon_research">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-search fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </div>
-                        <div class="caption">
-                            <h2 class="h2-card_font_IIIF">
-                                <a href="http://iiif.harvard.edu/portfolio/artshumrc/">
-                                    Arts & Humanities Research Computing
-                                </a>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 col-xs-12 col-margin-top">
-                    <div class="thumbnail">
-                        <div id="card-img" style="background-image: url(http://104.236.212.13/wp-content/uploads/2016/03/48309546.jpg);"></div>
-                        <div class="card-icon_books">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-book fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </div>
-                        <div class="caption">
-                            <h2 class="h2-card_font_IIIF">
-                                <a href="http://iiif.harvard.edu/portfolio/harvard-library/">
-                                    Harvard Library
-                                </a>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-<!--UI comment #3 - bottom space to compensate for sticky footer-->
-            <div class="row">
-                <div class="col-md-12" style="height: 6em;"></div>
-            </div>
-
+  <div style="margin-top: 4em;">
+    <div class="page-title-wrapper">
+      <h2 style="text-align:center; margin-top: 2em; margin-bottom:2em;">{{ page.title }}</h2>
+    </div>
+    <div class="row display-flex">
+      <div class="col-md-3 col-sm-6 col-12 col-margin-top">
+        <div class="card h-100">
+          <img class="card-img-top thumb-post" src="http://iiif.harvard.edu/wp-content/uploads/2017/03/banner.jpg" alt="Card image cap">
+          <div class="card-icon museum">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-university fa-stack-1x fa-inverse"></i>
+          </span>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title h2-card_font_IIIF"><a href="http://iiif.harvard.edu/portfolio/beyond-words-illuminated-manuscripts-in-boston-collections/">Beyond Words: Illuminated Manuscripts in Boston Collections</a></h2>
+          </div>
         </div>
+      </div>
 
-    {%- include footer.html -%}
-  </body>
+      <div class="col-md-3 col-sm-6 col-12 col-margin-top">
+        <div class="card h-100">
+          <img class="card-img-top thumb-post" src="http://iiif.harvard.edu/wp-content/uploads/2016/01/utagawa.jpg" alt="Card image cap">
+          <div class="card-icon course">
+            <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
+        </span>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title h2-card_font_IIIF"><a href="http://iiif.harvard.edu/portfolio/harvardx.html">HarvardX</a></h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-12 col-margin-top">
+        <div class="card h-100">
+          <img class="card-img-top thumb-post" src="http://104.236.212.13/wp-content/uploads/2016/01/atgi.png" alt="Card image cap">
+          <div class="card-icon application">
+            <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+        </span>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title h2-card_font_IIIF"><a href="http://iiif.harvard.edu/portfolio/atg">Academic Technology for the FAS</a></h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-12 col-margin-top">
+        <div class="card h-100">
+          <img class="card-img-top thumb-post" src="http://104.236.212.13/wp-content/uploads/2016/01/download.png" alt="Card image cap">
+          <div class="card-icon books">
+            <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-book fa-stack-1x fa-inverse"></i>
+        </span>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title h2-card_font_IIIF"><a href="http://iiif.harvard.edu/portfolio/jeffrey-hamburger">Jeffrey Hamburger, Kuno Francke Professor of German Art & Culture</a></h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-12 col-margin-top">
+        <div class="card h-100">
+          <img class="card-img-top thumb-post" src="http://104.236.212.13/wp-content/uploads/2016/01/vangogh-1.jpg" alt="Card image cap">
+          <div class="card-icon museum">
+            <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-university fa-stack-1x fa-inverse"></i>
+        </span>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title h2-card_font_IIIF"><a href="http://iiif.harvard.edu/portfolio/harvard-art-museums">Harvard Art Museums</a></h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-12 col-margin-top">
+        <div class="card h-100">
+          <img class="card-img-top thumb-post" src="http://104.236.212.13/wp-content/uploads/2016/01/tarot.jpg" alt="Card image cap">
+          <div class="card-icon research">
+            <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-search fa-stack-1x fa-inverse"></i>
+        </span>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title h2-card_font_IIIF"><a href="http://iiif.harvard.edu/portfolio/artshumrc">Arts and Humanities Research Computing</a></h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-12 col-margin-top">
+        <div class="card h-100">
+          <img class="card-img-top thumb-post" src="http://104.236.212.13/wp-content/uploads/2016/03/48309546.jpg" alt="Card image cap">
+          <div class="card-icon books">
+            <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-book fa-stack-1x fa-inverse"></i>
+        </span>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title h2-card_font_IIIF"><a href="http://iiif.harvard.edu/portfolio/harvard-library">Harvard Library</a></h2>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!--UI comment #3 - bottom space to compensate for sticky footer-->
+    <div class="row">
+      <div class="col-md-12" style="height: 6em;"></div>
+    </div>
+
+  </div>
+
+  {%- include footer.html -%}
+</body>
+
 </html>

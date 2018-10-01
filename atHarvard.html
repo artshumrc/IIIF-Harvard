@@ -1,0 +1,53 @@
+---
+title: '@ Harvard'
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+
+{%- include head.html -%}
+
+<style>
+
+</style>
+
+<body>
+  {% assign nav=site.navigation %}
+  {%- include header.html navigation=nav -%}
+
+  <div style="margin-top: 4em;">
+    <div class="page-title-wrapper">
+      <h2 style="text-align:center; margin-top: 2em; margin-bottom:2em;">{{ page.title }}</h2>
+    </div>
+
+  <div class="row">
+    <div class="col-md-3 offset-md-1">
+      <p class="text-left font_IIIF">
+        <img src="/assets/images/iiif.png" />
+    </div>
+    <div class="col-md-7 font_IIIF">
+      <p>
+        The International Image Interoperability Framework (IIIF) at Harvard University website is a
+              centralized resource for documentation, development, and use case scenarios regarding the display and
+              sharing of cultural heritage materials stored within the various Harvard University collections.
+              Partners include the
+                <a href="http://library.harvard.edu" target="_blank">Harvard Library</a>, the
+                <a href="http://www.harvardartmuseums.org" target="_blank">Harvard Art Museums</a>,
+                <a href="http://harvardx.harvard.edu" target="_blank">HarvardX</a>,
+                <a href="http://huit.harvard.edu/" target="_blank">Harvard University Information Technology</a>
+                (<a href="http://www.darthcrimson.org" target="_blank">Arts &amp; Humanities Research Computing</a>,
+                <a href="http://atg.fas.harvard.edu/" target="_blank">Academic Technology for FAS</a>, and
+                <a href="http://huit.harvard.edu/services/library-technology-services" target="_blank">Library
+                    Technology Services</a>), and various academic departments.
+      </p>
+      <p>
+        Harvard University has adopted the International Image Interoperability Framework standards as developed by the <a href="http://iiif.io/">IIIF Consortium </a>for describing and sharing digital assets, and has co-developed the IIIF image viewing software <a href="http://iiif.github.io/mirador/">Mirador</a>. Visitors can explore this site to learn more about Harvard’s work with IIIF, the Mirador viewer, and exciting innovations happening around campus that are made possible by these new standards and technologies.
+      </p>
+    </div>
+  </div>
+
+  </div>
+
+  {%- include footer.html -%}
+</body>
+
+</html>

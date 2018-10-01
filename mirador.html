@@ -1,0 +1,101 @@
+---
+title: Mirador
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+
+{%- include head.html -%}
+
+<style>
+
+</style>
+
+<body>
+  {% assign nav=site.navigation %}
+  {%- include header.html navigation=nav -%}
+
+  <div style="margin-top: 4em;">
+    <div class="page-title-wrapper">
+      <h2 style="text-align:center; margin-top: 2em; margin-bottom:2em;">{{ page.title }}</h2>
+    </div>
+
+  <div class="row">
+    <div class="col-md-7 offset-md-1">
+      <p class="text-left font_IIIF">
+        <strong>Mirador</strong> is a configurable, extensible, and easy-to-integrate image viewer, which enables image annotation and comparison of images from repositories dispersed around the world. Mirador has been optimized to display resources from repositories that support the <a href="http://iiif.io/">International Image Interoperability Framework</a> (IIIF) APIs. It provides a tiling windowed environment for comparing multiple image-based resources, synchronized structural and visual navigation of content using <a href="https://openseadragon.github.io/">OpenSeadragon</a>, <a href="http://www.openannotation.org/">Open Annotation</a> compliant annotation creation and viewing on deep-zoomable canvases, metadata display, book reading, bookmarking and more. <a href="http://iiif.github.io/mirador/">Additional information available at the official Mirador site</a>.
+      </p>
+    </div>
+    <div class="col-md-3 font_IIIF" style="text-align:center;">
+      <img src="/assets/images/mirador-logo-black.png" />
+      <h3 class="mirador-text">mirador</h3>
+      <div>
+        <a href="http://projectmirador.org/">Project Mirador Website</a>
+      </div>
+      <div>
+        <a href="/mirador-demo">Harvard IIIF Mirador Demo</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-10 offset-md-1" style="text-align:center;">
+      <h2 class="font_IIIF">Mirador Demo</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div id="viewer" class="col-md-7 offset-md-1">
+
+    </div>
+    <div id="mirador-explanation " class="col-md-3 font_IIIF">
+      <div>
+        <h4>Manuscripts</h4>
+        <p>
+          Manuscripts can be viewed as separate pages, or combined to emulate book format.
+        </p>
+        <div>
+          <div class="mirador-jump bookview">
+            <h5 class="font_IIIF">Book View</h5>
+            <i class="fas fa-book-open big-icon"></i>
+          </div>
+          <div class="mirador-jump pageview">
+            <h5 class="font_IIIF">Page View</h5>
+            <i class="fas fa-file-alt big-icon"></i>
+          </div>
+
+        </div>
+      </div>
+      <div>
+        <h4>Images</h4>
+        <p>
+          Images can be viewed individually, or within a carousel slideshow format.
+        </p>
+        Image View
+        <i class="fas fa-file-image imageview big-icon"></i>
+        Scroll View
+        <i class="fas fa-columns scrollview big-icon"></i>
+      </div>
+      <div>
+        <h4>Scrolling</h4>
+        <p>
+          Mirador renders extremely large objects with ease using deep zoom functionality provided by <a href="https://openseadragon.github.io/" target="_blank">OpenSeadragon</a>. In addition, the viewer supports dynamic grid-based layouts for multiple views of image content.
+        </p>
+        Scroll Full View
+        <i class="far fa-newspaper scrollfullview big-icon"></i>
+        Scroll Zoom View
+        <i class="fas fa-search-plus scrollzoomview big-icon"></i>
+        Scroll Grid View
+        <i class="fas fa-th-large gridview big-icon"></i>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  {%- include footer.html -%}
+
+  <link rel="stylesheet" type="text/css" href="/assets/javascript/mirador/css/mirador-combined.css" />
+  <script type="text/javascript" src="/assets/javascript/mirador/mirador.min.js"></script>
+  <script type="text/javascript" src="/assets/javascript/mirador-page.js"></script>
+</body>
+
+</html>
