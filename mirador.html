@@ -16,7 +16,7 @@ title: Mirador
 
   <div style="margin-top: 4em;">
     <div class="page-title-wrapper">
-      <h2 style="text-align:center; margin-top: 2em; margin-bottom:2em;">{{ page.title }}</h2>
+      <h2 class="page-title">{{ page.title }}</h2>
     </div>
 
   <div class="row">
@@ -38,54 +38,76 @@ title: Mirador
   </div>
 
   <div class="row">
-    <div class="col-md-10 offset-md-1" style="text-align:center;">
-      <h2 class="font_IIIF">Mirador Demo</h2>
+    <div class="col-md-10 offset-md-1 font_IIIF" style="text-align:center;">
+      <h3 class="page-title" >Mirador Demo</h3>
     </div>
   </div>
-  <div class="row">
-    <div id="viewer" class="col-md-7 offset-md-1">
+  <div class="row" style="margin-bottom:2em;">
+    <div id="viewer" class="col-md-5 offset-md-1">
 
     </div>
-    <div id="mirador-explanation " class="col-md-3 font_IIIF">
-      <div>
-        <h4>Manuscripts</h4>
-        <p>
-          Manuscripts can be viewed as separate pages, or combined to emulate book format.
-        </p>
-        <div>
-          <div class="mirador-jump bookview">
-            <h5 class="font_IIIF">Book View</h5>
-            <i class="fas fa-book-open big-icon"></i>
-          </div>
-          <div class="mirador-jump pageview">
-            <h5 class="font_IIIF">Page View</h5>
-            <i class="fas fa-file-alt big-icon"></i>
-          </div>
-
+    <div id="mirador-explanation " class="col-md-4 offset-md-1 font_IIIF">
+      <div class="row">
+        <div class="col-md-12 font_IIIF">
+          <h4 class="page-title" style="margin-top:0px">Manuscripts</h4>
+          <p>
+            Manuscripts can be viewed as separate pages, or combined to emulate the format of a printed book.
+          </p>
         </div>
       </div>
-      <div>
-        <h4>Images</h4>
-        <p>
-          Images can be viewed individually, or within a carousel slideshow format.
-        </p>
-        Image View
-        <i class="fas fa-file-image imageview big-icon"></i>
-        Scroll View
-        <i class="fas fa-columns scrollview big-icon"></i>
+      <div class="row">
+        <div class="col-md-5 offset-md-1 bookview text-center">
+            <h5 class="font_IIIF">Book View</h5>
+            <i class="fas fa-book-open big-icon"></i>
+        </div>
+        <div class="col-md-5 pageview text-center">
+          <h5 class="font_IIIF">Page View</h5>
+          <i class="fas fa-file-alt big-icon"></i>
+        </div>
       </div>
-      <div>
-        <h4>Scrolling</h4>
-        <p>
-          Mirador renders extremely large objects with ease using deep zoom functionality provided by <a href="https://openseadragon.github.io/" target="_blank">OpenSeadragon</a>. In addition, the viewer supports dynamic grid-based layouts for multiple views of image content.
-        </p>
-        Scroll Full View
-        <i class="far fa-newspaper scrollfullview big-icon"></i>
-        Scroll Zoom View
-        <i class="fas fa-search-plus scrollzoomview big-icon"></i>
-        Scroll Grid View
-        <i class="fas fa-th-large gridview big-icon"></i>
+
+      <div class="row">
+        <div class="col-md-12 font_IIIF">
+          <h4 class="page-title">Images</h4>
+          <p>
+            Images can be viewed individually, or within a carousel slideshow format.
+          </p>
+        </div>
       </div>
+      <div class="row">
+        <div class="col-md-5 offset-md-1 text-center imageview">
+          <h5 class="font_IIIF">Image View</h5>
+          <i class="fas fa-file-image big-icon"></i>
+        </div>
+        <div class="col-md-5 text-center scrollview">
+          <h5 class="font_IIIF">Scroll View</h5>
+          <i class="fas fa-columns scrollview big-icon"></i>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 font_IIIF">
+          <h4 class="page-title">Scrolling</h4>
+          <p>
+            Mirador renders extremely large objects with ease using deep zoom functionality provided by <a href="https://openseadragon.github.io/" target="_blank">OpenSeadragon</a>. In addition, the viewer supports dynamic grid-based layouts for multiple views of image content.
+          </p>
+        </div>
+      </div>
+      <div class="row" >
+        <div class="col-md-4 text-center scrollfullview">
+          <h5 class="font_IIIF">Scroll Full View</h5>
+          <i class="fas fa-newspaper big-icon"></i>
+        </div>
+        <div class="col-md-4 text-center scrollzoomview">
+          <h5 class="font_IIIF">Scroll Zoom View</h5>
+          <i class="fas fa-search-plus big-icon"></i>
+        </div>
+        <div class="col-md-4 text-center gridview">
+          <h5 class="font_IIIF">Scroll Grid  View</h5>
+          <i class="fas fa-th-large big-icon"></i>
+        </div>
+      </div>
+
     </div>
   </div>
 

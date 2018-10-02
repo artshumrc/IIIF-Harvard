@@ -35,6 +35,17 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 5px;
 }
+.page-title {
+  text-align:center;
+  margin-top: 3em;
+  margin-bottom:2em;
+}
+h4.page-title {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
 .carousel-caption {
 padding-bottom: 30px;
 margin-right: -10%;
@@ -185,10 +196,9 @@ height: 22em;
 .big-icon:hover{
   color: #007bff;
 }
-.mirador-jump {
-  width: 50%;
-  text-align:center;
-  display:inline;
+
+.bookview:hover, .pageview:hover, .imageview:hover, .scrollview:hover, .scrollfullview:hover, .scrollzoomview:hover, .gridview:hover {
+  background-color: #80808045;
 }
 
 .imagecontainer{
