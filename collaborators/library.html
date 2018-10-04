@@ -16,25 +16,36 @@ title: 'Harvard University Library'
 
   <div style="margin-top: 4em;">
     <div class="page-title-wrapper">
-      <h2 style="text-align:center; margin-top: 2em; margin-bottom:2em;">{{ page.title }}</h2>
+      <h2 class="page-title">{{ page.title }}</h2>
     </div>
-
-  <div class="row">
-    <div class="col-md-3 offset-md-1">
-      <p class="text-left font_IIIF">
-        <img src="/assets/images/iiif.png" />
+    <div class="row">
+      <div class="col-md-10 offset-md-1 font_IIIF">
+        <h3 class="text-center">IIIF Support at Harvard Library</h3>
+      </div>
     </div>
-    <div class="col-md-7 font_IIIF">
-      <p>
-        We should add events and resources here. Hacking Mirador. Workshops. Etc.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mollis lacus nibh, eu malesuada leo accumsan vitae. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent orci dolor, sollicitudin eget vulputate et, consectetur vel urna. Donec at ligula a eros congue tempor eu vel velit. Nullam consequat egestas augue, id suscipit arcu. Cras placerat eleifend arcu non viverra. In lacinia lectus diam, molestie rutrum tortor ultricies in. Nulla vitae orci viverra leo luctus rutrum. Aenean vel consectetur ipsum. Sed dolor dolor, dictum quis eleifend at, elementum vel sapien. Nam nec elit nisl.
-      </p>
+    <div class="row">
+      <div class="col-md-5 offset-md-1">
+        <img src="/assets/images/library-image-viewer.jpg" class="img-fluid" />
+      </div>
+      <div class="col-md-5 font_IIIF">
+  			<p>
+          <a href="http://library.harvard.edu/" target="_blank">Harvard Library</a> has adopted IIIF as the standard for sharing its digital image content with the world. IIIF enables rich digital resources from Harvard’s libraries, archives, and museums to be accessed by any IIIF compatible viewer for research, teaching, and learning. Library Technology Services, a part of Harvard University Information Technology, adapted Mirador to serve as the viewer for the Harvard Library’s digital holdings.
+        </p>
+        <p>
+          Mirador’s side by side viewing ability enables scholars to view and compare documents from Harvard’s collections along side documents stored at other IIIF repositories. The large and growing size of the IIIF community – including <a href="http://iiif.io/community/">peer institutions</a> such as Yale, Princeton, Stanford, Oxford, and others – opens opportunities for collaborative and cross site research that has not been possible before.
+        </p>
+  		</div>
+    </div>
+    <div class="row">
+      <div class="col-md-10 offset-md-1 font_IIIF">
+  			<p>There are three core components of the Library’s support for IIIF:</p>
+        <p>First, the Digital Repository Service (DRS) Image Delivery Service now implements the IIIF Image API. This allows any IIIF viewer to display an image or image region for the over 16,000,000 still images in the repository. The Image Delivery Service was recently upgraded to support the 2.1 version of the IIIF Image API.</p>
+        <p>Second, the Harvard Library IIIF Presentation API service provides IIIF access to over 235,000 page turned objects from the DRS, including digitized books, manuscripts, diaries, and other digitized archival and library material.</p>
+        <p>Third, the Library has implemented Mirador as the viewer for DRS images and page turned objects. See <a href="http://iiif.lib.harvard.edu/manifests/view/drs:5981093$29b" target="_blank">this link</a>, for example, to see the Harvard Library Viewer display a medieval Book of Hours from Houghton Library. The Mirador image viewer makes use of deep zoom technology via <a href="https://openseadragon.github.io/" target="_blank">OpenSeadragon</a>, an open-source web-based viewer for high resolution zoomable images.</p>
+		    </div>
     </div>
   </div>
 
-  </div>
 
   {%- include footer.html -%}
 
