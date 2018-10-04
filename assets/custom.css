@@ -305,3 +305,12 @@ letter-spacing:.05em;
   margin: 2px !important;
   text-align: center;
 }
+
+.upcoming-events > div:last-of-type{
+  border-bottom-style: dashed;
+  border-bottom-color: grey;
+  border-bottom-width: 2px;
+}
+.row.events {
+  margin-top: 2em;
+}
