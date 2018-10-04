@@ -69,6 +69,7 @@ title: 'IIIF'
           <div class="attr2">
             <select id="region" class="changeIIIF">
               <option value="full">full/</option>
+              <option value="square">square</option>
               <option value="1000,100,3000,2000">1000,100,3000,2000</option>
               <option value="2000,3000,2000,3000">2000,3000,2000,3000</option>
             </select>
@@ -80,20 +81,51 @@ title: 'IIIF'
               <option value="2000,">2000,/</option>
               <option value="1000,">1000,/</option>
               <option value="500,">500,/</option>
+              <option value="250,">250,/</option>
             </select>
           </div>
         </li>
         <li>
           <div class="attr">ROTATION</div>
-          <div class="attr2"><select id="rotation" class="changeIIIF"><option value="0">0/</option><option value="90">90</option><option value="180">180</option></select></div>
+          <div class="attr2">
+            <select id="rotation" class="changeIIIF">
+              <option value="0">0/</option>
+              <option value="45">45/</option>
+              <option value="90">90/</option>
+              <option value="135">135/</option>
+              <option value="180">180/</option>
+              <option value="225">225/</option>
+              <option value="270">270/</option>
+              <option value="315">315/</option>
+              <option value="!0">!0</option>
+              <option value="!180">!180</option>
+            </select>
+          </div>
         </li>
         <li>
-          <div class="attr" id="quality">QUALITY</div>
-          <div class="attr2">native.jpg</div>
+          <div class="attr">QUALITY</div>
+          <div class="attr2">
+            <select id="quality" class="changeIIIF">
+              <option value="default">default</option>
+              <option value="color">color</option>
+              <option value="gray">gray</option>
+              <option value="bitonal">bitonal</option>
+            </select></div>
+        </li>
+        <li>
+          <div class="attr">FORMAT</div>
+          <div class="attr2">
+            <select id="format" class="changeIIIF">
+              <option value=".jpg">.jpg</option>
+              <option value=".png">.png</option>
+              <option value=".gif">.gif</option>
+            </select>
+          </div>
         </li>
       </ul>
       <div class="text-center" style="margin-bottom:20px;">
-        <a href="http://ids.lib.harvard.edu/ids/iiif/5981096/full/2000,/0/native.jpg" id="image-url" target="_blank">http://ids.lib.harvard.edu/ids/iiif/5981096/full/2000,/0/native.jpg</a>
+        <a href="http://ids.lib.harvard.edu/ids/iiif/5981096/full/2000,/0/default.jpg" id="image-url" target="_blank">http://ids.lib.harvard.edu/ids/iiif/5981096/full/2000,/0/default.jpg</a>
+        <a id="dl-iiif-image" href="http://ids.lib.harvard.edu/ids/iiif/5981096/full/2000,/0/default.jpg" download="iiif-image"><i class="fas fa-download"></i></a>
       </div>
     </div>
   </div>

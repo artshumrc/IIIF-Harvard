@@ -1,6 +1,6 @@
 $(function(){
     var SetCarouselHeight = function() {
-        $("#carousel .carousel-item > img").height(function(){
+        $("#front-carousel .carousel-item > img").height(function(){
             return $("#carousel").width() * 0.5;
         });
     }

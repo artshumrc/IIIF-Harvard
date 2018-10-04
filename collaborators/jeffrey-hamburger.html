@@ -1,5 +1,5 @@
 ---
-title: 'Jeffrey Hamburger'
+title: 'Jeffrey Hamburger, Kuno Francke Professor of German Art & Culture'
 ---
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: " en " }}">
@@ -16,20 +16,27 @@ title: 'Jeffrey Hamburger'
 
   <div style="margin-top: 4em;">
     <div class="page-title-wrapper">
-      <h2 style="text-align:center; margin-top: 2em; margin-bottom:2em;">{{ page.title }}</h2>
+      <h2 class="page-title">{{ page.title }}</h2>
     </div>
 
   <div class="row">
-    <div class="col-md-3 offset-md-1">
-      <p class="text-left font_IIIF">
-        <img src="/assets/images/iiif.png" />
+    <div class="col-md-10 offset-md-1">
+      <div id="viewer">
+
+      </div>
     </div>
-    <div class="col-md-7 font_IIIF">
+  </div>
+  <div class="row">
+    <div class="col-md-10 offset-md-1 font_IIIF">
+      <h4>Cambridge, Houghton Library, Harvard University, MS TYP 1095</h4>
       <p>
-        We should add events and resources here. Hacking Mirador. Workshops. Etc.
+        Houghton Library, MS Typ 1095 is a fragment consisting of two leaves excised from a larger manuscript. The third leaf, which prefaced the two at Harvard and which opens with a large historiated initial, survives in the Graphische Sammlung in Munich (inv. no. 18703). The principal text borne by the three leaves, “Verbum dei deo natum” (The Word of God, born of God) is a sequence (a rhyming Latin poem performed in the liturgy following the Alleluia of the mass, hence its name) in honor of John the Evangelist. As a rule, sequences, which customarily were placed at the back of a gradual, the book containing the chant for the mass, were never illustrated; in this respect, Typ 1095 represents a notable exception. No less exceptional is the manner in which the leaves are decorated with inscribed initials containing numerous epithets in honor of the Evangelist. Additional inscriptions held by Church Fathers (not always the ones to whom the inscriptions can be traced) frame the pages. Altogether, the pages provide a remarkably learned commentary on the content of the liturgy.
       </p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mollis lacus nibh, eu malesuada leo accumsan vitae. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent orci dolor, sollicitudin eget vulputate et, consectetur vel urna. Donec at ligula a eros congue tempor eu vel velit. Nullam consequat egestas augue, id suscipit arcu. Cras placerat eleifend arcu non viverra. In lacinia lectus diam, molestie rutrum tortor ultricies in. Nulla vitae orci viverra leo luctus rutrum. Aenean vel consectetur ipsum. Sed dolor dolor, dictum quis eleifend at, elementum vel sapien. Nam nec elit nisl.
+        Despite presenting a sequence, the two leaves cannot have formed part of a sequentiary; the last text, in honor of the Cross, is out of order. They therefore most likely come from a libellus or “little book” in honor of John the Evangelist. The saint, who was popular among Dominican nuns, enjoyed a special cult at the Dominican convent of Paradies bei Soest in Westphalia in northwestern Germany, where the leaves were written and illuminated ca. 1380. Part of a larger surviving set, the manuscript was designed, written and decorated by the nuns who used it within their liturgical celebrations and testifies to a remarkable and unexpected degree of Latin literacy and learning. The many hundreds of inscriptions in the manuscripts from Paradies permit a reconstruction of the nuns’ likely library holdings.
+      </p>
+      <p>
+        Medieval manuscripts incorporate numerous ingenious methods of integrating text and image. In contrast, modern editions and studies usually separate an edition of the text from the images of which they form an integral part. The advantage of a presentation of the kind made possible by Mirador is that one can examine the pages without divorcing text from the images within which the inscriptions visual attributes—color, materials, size, directionality, script type—all contribute to their meaning.
       </p>
     </div>
   </div>
@@ -40,7 +47,7 @@ title: 'Jeffrey Hamburger'
 
   <link rel="stylesheet" type="text/css" href="/assets/javascript/mirador/css/mirador-combined.css" />
   <script type="text/javascript" src="/assets/javascript/mirador/mirador.min.js"></script>
-  <script type="text/javascript" src="/assets/javascript/mirador-page.js"></script>
+  <script type="text/javascript" src="/assets/javascript/hamburger-mirador.js"></script>
 </body>
 
 </html>
