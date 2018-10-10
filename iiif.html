@@ -37,7 +37,10 @@ title: 'IIIF'
   </div>
   <div class="row align-items-center">
     <div class="col-md-7 offset-md-1 font_IIIF">
-      <p>The <abbr title="International Image Interoperability Framework">IIIF</abbr> Image <abbr title="Application Programming Interface">API</abbr> specifies a web service that returns an image in response to a standard <abbr title="Hypertext Transfer Protocol">HTTP</abbr> or <abbr title="Hypertext Transfer Protocol (Secure)">HTTPS</abbr> request. The URI can specify the region, size, rotation, quality characteristics and format of the requested image. A URI can also be constructed to request basic technical information about the image to support client applications. This <abbr title="Application Programming Interface">API</abbr> was conceived of to facilitate systematic reuse of image resources in digital image repositories maintained by cultural heritage organizations. It could be adopted by any image repository or service, and can be used to retrieve static images in response to a properly constructed URI. <a href="http://iiif.io/api/image/2.0/" target="_blank" rel="noopener noreferrer">[Read the full documentation here.]</a></p>
+      <p>The <abbr title="International Image Interoperability Framework">IIIF</abbr> Image <abbr title="Application Programming Interface">API</abbr> specifies a web service that returns an image in response to a standard <abbr title="Hypertext Transfer Protocol">HTTP</abbr> or <abbr title="Hypertext Transfer Protocol (Secure)">HTTPS</abbr> request. The URI can specify the region, size, rotation, quality characteristics and format of the requested image. A URI can also be constructed to request basic technical information about the image to support client applications. This <abbr title="Application Programming Interface">API</abbr> was conceived of to facilitate systematic reuse of image resources in digital image repositories maintained by cultural heritage organizations. It could be adopted by any image repository or service, and can be used to retrieve static images in response to a properly constructed URI.</p>
+      <p>
+        <a href="http://iiif.io/api/image/2.1/" target="_blank" rel="noopener noreferrer">[Read the full documentation here.]</a>
+      </p>
       <p>
         Unique URIs can be used to call image data from the server. A few examples are below:
       </p>
@@ -51,6 +54,7 @@ title: 'IIIF'
   </div>
   <div class="row">
     <div class="col-md-12 font_IIIF">
+      <h4 class="text-center">IIIF Image API Demo</h4>
       <ul class="demo">
         <li>
           <div class="attr" id="server">SERVER</div>
@@ -80,7 +84,7 @@ title: 'IIIF'
             <select id="size" class="changeIIIF">
               <option value="2000,">2000,/</option>
               <option value="1000,">1000,/</option>
-              <option value="500,">500,/</option>
+              <option value="500," selected="selected">500,/</option>
               <option value="250,">250,/</option>
             </select>
           </div>
@@ -124,26 +128,52 @@ title: 'IIIF'
         </li>
       </ul>
       <div class="text-center" style="margin-bottom:20px;">
-        <a href="http://ids.lib.harvard.edu/ids/iiif/5981096/full/2000,/0/default.jpg" id="image-url" target="_blank">http://ids.lib.harvard.edu/ids/iiif/5981096/full/2000,/0/default.jpg</a>
-        <a id="dl-iiif-image" href="http://ids.lib.harvard.edu/ids/iiif/5981096/full/2000,/0/default.jpg" download="iiif-image"><i class="fas fa-download"></i></a>
+        <a href="http://ids.lib.harvard.edu/ids/iiif/5981096/full/500,/0/default.jpg" id="image-url" target="_blank">http://ids.lib.harvard.edu/ids/iiif/5981096/full/500,/0/default.jpg</a>
+        <a id="dl-iiif-image" href="http://ids.lib.harvard.edu/ids/iiif/5981096/full/500,/0/default.jpg" download="iiif-image"><i class="fas fa-download"></i></a>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-md-8 offset-md-2">
       <div class="iiif-image-api text-center">
-        <img class="img-fluid" id="iiif-image-api-img" src="http://ids.lib.harvard.edu/ids/iiif/5981096/full/pct:50/0/native.jpg">
+        <img class="img-fluid" id="iiif-image-api-img" src="http://ids.lib.harvard.edu/ids/iiif/5981096/full/500,/0/native.jpg">
       </div>
     </div>
   </div>
+
+  <div class="row" style="margin-top:2em;">
+    <div class="col-md-8 offset-md-2 font_IIIF">
+      <h4 class="text-center" style="margin-bottom: 1em;">IIIF Crop Tool</h4>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="iiif-crop-tool-url">IIIF Resource Baseurl</span>
+        </div>
+        <input type="text" class="form-control" placeholder="https://iiif.dl.itc.u-tokyo.ac.jp/iiif/hyakki/images/hyakki.tif" aria-label="iiif-crop-tool-url-input" aria-describedby="basic-addon1" id="iiif-crop-tool-url-input">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="change-image">Change Image</button>
+        </div>
+      </div>
+
+      <iframe id="crop-tool" src="/iiif-crop-tool.html"></iframe>
+    </div>
+  </div>
+
   <div class="row">
     <div class="col-md-12 font_IIIF">
       <h3 class="page-title">IIIF Presentation API</h3>
     </div>
   </div>
   <div class="row align-items-center">
-    <div class="col-md-7 offset-md-1 font_IIIF">
-      <p>The role of the IIIF presentation API is to describe a digital object that may contain hundreds of images in such a way that the user and the viewer software can successfully navigate&nbsp;the object (via the <em>manifest</em> resource), the order in which individual surfaces or views are presented (the <em>sequence</em> resource), and the individual surfaces or views (<em>canvas</em> resources). Each canvas may have images and/or other content resources associated with it (<em>content</em> resources) to allow the view to be rendered. An object may also have parts; for example, a book may have chapters where several pages may be associated with a single chapter (a <em>range</em> resource) or there may be groups of content resource above the page level, such as all of the texts that make up a single edition of a book (a <em>layer</em> resource). These resource types, along with their properties, make up the <abbr title="International Image Interoperability Framework">IIIF</abbr> Presentation <abbr title="Application Programming Interface">API</abbr>. <a href="http://iiif.io/api/presentation/2.0/" target="_blank" rel="noopener noreferrer">[Read the full documentation here.]</a></p>
+    <div class="col-md-2 offset-md-1">
+      <img class="img-fluid" src="/assets/images/presi-api.png" />
+    </div>
+    <div class="col-md-6 font_IIIF">
+      <p>The role of the IIIF presentation API is to describe a digital object that may contain hundreds of images in such a way that the user and the viewer software can successfully navigate&nbsp;the object (via the <em>manifest</em> resource), the order in which individual surfaces or views are presented (the <em>sequence</em> resource), and the individual surfaces or views (<em>canvas</em> resources). Each canvas may have images and/or other content resources associated with it (<em>content</em> resources) to allow the view to be rendered. An object may also have parts; for example, a book may have chapters where several pages may be associated with a single chapter (a <em>range</em> resource) or there may be groups of content resource above the page level, such as all of the texts that make up a single edition of a book (a <em>layer</em> resource). These resource types, along with their properties, make up the <abbr title="International Image Interoperability Framework">IIIF</abbr> Presentation <abbr title="Application Programming Interface">API</abbr>.</p>
+
+      <p>
+        <a href="http://iiif.io/api/presentation/2.1/" target="_blank" rel="noopener noreferrer">[Read the full documentation here.]</a>
+      </p>
       <p>
         <a href="/mirador">Read more about Harvard’s IIIF viewer, Mirador.</a>
       </p>
