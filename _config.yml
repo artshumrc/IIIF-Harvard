@@ -16,7 +16,7 @@
 title: IIIF at Harvard
 email: ""
 description: >- # this means to ignore newlines until "baseurl:"
-  A Bootstrap 4 start up project for Jekyll and Github Pages
+  Harvard University is devoted to excellence in teaching, learning, and research, and to developing leaders in many disciplines who make a difference global IIIF adoption at Harvard is a collaborative effort that began in earnest in 2014.  HarvardX, Harvard Art Museums, Harvard University Information Technology, Harvard Library, and various faculty have contributed in some way to increasing the visibility and use of IIIF at Harvard. The IIIF/Mirador Working Group guides and coordinates IIIF/Mirador-related efforts across the University.  As such, no one group “owns” IIIF at Harvard. The IIIF at Harvard website aims to highlight the collaborations and projects at Harvard that have utilized IIIF or Mirador in some capacity.
 #baseurl: "" # the subpath of your site, e.g. /blog
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
